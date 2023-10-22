@@ -58,11 +58,16 @@ const LinkBlock = styled.div<LinkBlockProps>`
   position: absolute;
   width: 64px;
   height: 0px;
-  background-color: #ffff37;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(251, 255, 0, 1) 100%
+  );
   bottom: 22px;
   transition: all 0.4s;
   ${NavbarLink}:hover + & {
-    height: 120px;
+    height: 60px;
   }
-  height: ${(props) => (props.active ? "120px" : "0px")};
+  height: ${(props) => (props.active ? "60px" : "0px")};
 `;
