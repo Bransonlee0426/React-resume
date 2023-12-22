@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const baseApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8080' }),
-  tagTypes: ['Card'],
+  tagTypes: ['Card', 'User'],
   reducerPath: 'baseApi',
   // 缓存，默认时间是秒，默认时长60秒
   keepUnusedDataFor: 5 * 60,

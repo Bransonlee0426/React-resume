@@ -1,4 +1,4 @@
-export interface Type_api_card {
+export interface Card {
   message?: string;
   people?: string[];
 }

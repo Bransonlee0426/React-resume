@@ -1,16 +1,16 @@
 import { baseApi } from '../base';
-import { Type_api_card } from './interface';
+import { Card } from './interface';
 
-const API_CARD = '/api/card';
+const API_CARD = '/api/cards';
 
 //使用base URL 和endpoints 定义服务
 const cardApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     // 查询列表
-    getCardData: builder.query<Type_api_card, void>({
+    getCardData: builder.query<Card, void>({
       query: () => API_CARD,
       providesTags: ['Card'],
-      transformResponse: (response: { data: Promise<Type_api_card> }) => {
+      transformResponse: (response: { data: Promise<Card> }) => {
         return response.data;
       },
     }),
@@ -46,6 +46,5 @@ const cardApi = baseApi.injectEndpoints({
 });
 //导出可在函数式组件使用的hooks,它是基于定义的endpoints自动生成的
 export const { useGetCardDataQuery } = cardApi;
-export const { useLazyGetCardDataQuery } = cardApi;
 
 export default cardApi;
