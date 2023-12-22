@@ -37,8 +37,8 @@ export default function Paper() {
             <div className="flex flex-col">
               <Title class="mb-5" title="S K I L L S" fontSize="18px"></Title>
               <Title title="P R O F E S S I O N A L" fontSize="16px" fontWeight="500"></Title>
-              {data?.skills?.map((item) => {
-                return <IconItem class="mt-2" icon="images/rec.png" iconSize="12px" content={item}></IconItem>;
+              {data?.skills?.map((item, index) => {
+                return <IconItem key={index} class="mt-2" icon="images/rec.png" iconSize="12px" content={item}></IconItem>;
               })}
             </div>
             <div className="flex flex-col">
@@ -48,9 +48,10 @@ export default function Paper() {
           </div>
           <div className="flex flex-col col-span-2">
             <Title title="E X P E R I E N C E" fontSize="16px"></Title>
-            {data?.experience?.map((item) => {
+            {data?.experience?.map((item, index) => {
               return (
                 <TimeSection
+                  key={index}
                   jobTitle={item?.job_title}
                   companyName={item?.company_name}
                   content={item?.content}

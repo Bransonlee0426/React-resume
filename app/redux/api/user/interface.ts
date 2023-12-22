@@ -1,8 +1,3 @@
-export interface Card {
-  message?: string;
-  people?: string[];
-}
-
 interface Experience {
   user_id: number;
   job_title: string;

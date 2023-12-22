@@ -2,12 +2,14 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import cardReducer from '../redux/features/card/cardSlice';
+import userReducer from '../redux/features/user/userSlice';
 import { baseApi } from './api/base';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 export const store = configureStore({
   reducer: {
     card: cardReducer,
+    user: userReducer,
     [baseApi.reducerPath]: baseApi.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
