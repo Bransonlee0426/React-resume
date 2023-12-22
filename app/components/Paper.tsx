@@ -74,6 +74,7 @@ const PaperWrap = styled.div`
   left: 50%;
   transform: translate(-50%, -15%);
   padding: 0px 70px;
+  box-shadow: 7px 6px 13px -1px rgba(0, 0, 0, 0.51);
 `;
 
 const ProfileText = styled.div`

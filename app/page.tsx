@@ -13,5 +13,5 @@ export default function Home() {
 }
 const MainPageWrap = styled.div`
   display: flex;
-  height: 1800px;
+  height: 2400px;
 `;
